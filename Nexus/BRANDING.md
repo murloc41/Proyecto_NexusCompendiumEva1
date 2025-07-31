@@ -17,13 +17,15 @@ El nombre Nexus Compendium no es una elección casual: es una declaración
 estratégica de identidad, tanto desde el marketing institucional como desde la
 ingeniería del software.
 
- ## Nexus, palabra de origen latino, significa conexión vínculo. En el contexto del
+ ## Nexus
+ palabra de origen latino, significa conexión vínculo. En el contexto del
 proyecto, representa la columna vertebral que articula relaciones entre usuarios,
 proyectos y entidades académicas. Es el punto de convergencia donde
 estudiantes, docentes y administradores se encuentran, colaboran y gestionan de
 manera digital sus procesos educativos.
 
- ## Compendium hace alusión a una colección organizada de conocimientos, un
+ ## Compendium 
+ hace alusión a una colección organizada de conocimientos, un
 repositorio digital ordenado, estructurado y accesible. En otras palabras, es el
 contenedor académico definitivo, donde cada dato tiene un propósito y cada
 función responde a una necesidad institucional concreta.
