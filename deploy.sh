@@ -22,7 +22,7 @@ if [ ! -f .env ]; then
 
     # Usamos sed para modificar el archivo .env en el sitio.
     # La opción -i modifica el archivo directamente.
-    sed -i "s/APP_NAME=Laravel/APP_NAME=\"Project Software Cocktail\"/" .env
+    sed -i "s/APP_NAME=Laravel/APP_NAME=\"Nexus Compendium\"/" .env
     sed -i "s#APP_URL=http://localhost#APP_URL=${APP_URL}#" .env
     sed -i "s/DB_CONNECTION=sqlite/DB_CONNECTION=mysql/" .env
     sed -i "s/# DB_HOST=127.0.0.1/DB_HOST=127.0.0.1/" .env
@@ -32,7 +32,7 @@ if [ ! -f .env ]; then
     sed -i "s/# DB_PASSWORD=/DB_PASSWORD=/" .env
 else
     echo "El archivo .env ya existe. Omitiendo la configuración automática."
-fi
+fi 
 
 # 4. Generar la clave de la aplicación Laravel
 echo "Generando la clave de la aplicación..."

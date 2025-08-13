@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreignId('role_id')->constrained('roles');
+            $table->foreignId('role_id')->nullable()->constrained('roles');
             $table->string('telefono', 30)->nullable();
             $table->string('cargo', 100)->nullable();
             $table->text('habilidades')->nullable(); // Para estudiantes, lista de habilidades técnicas
@@ -37,7 +37,7 @@ return new class extends Migration
             $table->timestamps();
             
             // Índices para mejorar el rendimiento de búsquedas comunes
-            $table->index(['role_id', 'instituto_id']);
+            $table->index(['role_id']);
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

@@ -10,7 +10,7 @@
             <p class="text-muted">Visualiza y administra los proyectos de Vinculación con el Medio</p>
         </div>
         <div>
-            <a href="{{ url('/proyectos/crear') }}" class="btn btn-primary">
+            <a href="{{ route('proyectos.create') }}" class="btn btn-primary">
                 <i class="bi bi-plus-circle me-1"></i> Nuevo Proyecto
             </a>
         </div>
@@ -19,46 +19,38 @@
     <!-- Filtros y búsqueda -->
     <div class="card mb-4 border-0 shadow-sm">
         <div class="card-body p-3">
-            <div class="row g-3">
-                <div class="col-md-3">
-                    <div class="input-group">
-                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control border-start-0" placeholder="Buscar proyectos...">
+            <form method="GET" action="{{ route('proyectos.index') }}">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+                            <input type="text" name="q" class="form-control border-start-0" placeholder="Buscar proyectos..." value="{{ request('q') }}">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" name="estado">
+                            <option value="">Todos los estados</option>
+                            <option value="1" {{ request('estado') == 1 ? 'selected' : '' }}>Activo</option>
+                            <option value="2" {{ request('estado') == 2 ? 'selected' : '' }}>Finalizado</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" name="area">
+                            <option value="">Todas las áreas</option>
+                            <option value="1" {{ request('area') == 1 ? 'selected' : '' }}>Ingeniería</option>
+                            <option value="2" {{ request('area') == 2 ? 'selected' : '' }}>Ciencias</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="month" name="periodo" class="form-control" value="{{ request('periodo') }}">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-secondary w-100" type="submit">
+                            <i class="bi bi-funnel me-1"></i> Filtrar
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <select class="form-select">
-                        <option value="">Todos los estados</option>
-                        <option value="active">Activo</option>
-                        <option value="planning">En Planificación</option>
-                        <option value="completed">Completado</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="">Todas las áreas</option>
-                        <option value="informatica">Informática</option>
-                        <option value="administracion">Administración</option>
-                        <option value="contabilidad">Contabilidad</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="diseno">Diseño</option>
-                        <option value="otra">Otras</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <select class="form-select">
-                        <option value="">Todos los periodos</option>
-                        <option value="2025-1">2025-1</option>
-                        <option value="2024-2">2024-2</option>
-                        <option value="2024-1">2024-1</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn btn-outline-secondary w-100">
-                        <i class="bi bi-funnel me-1"></i> Filtrar
-                    </button>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
@@ -72,7 +64,7 @@
                     </div>
                     <div>
                         <h6 class="text-muted mb-1">Total Proyectos</h6>
-                        <h3 class="mb-0">12</h3>
+                        <h3 class="mb-0">{{ $total }}</h3>
                     </div>
                 </div>
             </div>
@@ -85,7 +77,7 @@
                     </div>
                     <div>
                         <h6 class="text-muted mb-1">Proyectos Activos</h6>
-                        <h3 class="mb-0">5</h3>
+                        <h3 class="mb-0">{{ $activos }}</h3>
                     </div>
                 </div>
             </div>
@@ -98,7 +90,7 @@
                     </div>
                     <div>
                         <h6 class="text-muted mb-1">En Planificación</h6>
-                        <h3 class="mb-0">3</h3>
+                        <h3 class="mb-0">{{ $planificacion }}</h3>
                     </div>
                 </div>
             </div>
@@ -111,7 +103,7 @@
                     </div>
                     <div>
                         <h6 class="text-muted mb-1">Completados</h6>
-                        <h3 class="mb-0">4</h3>
+                        <h3 class="mb-0">{{ $completados }}</h3>
                     </div>
                 </div>
             </div>
@@ -135,287 +127,78 @@
 
     <!-- Grid de proyectos (Vista de tarjetas) -->
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="cards-view">
-        <!-- Proyecto 1 -->
+        @foreach($projects as $project)
         <div class="col">
             <div class="card h-100 border-0 shadow-sm project-card">
                 <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 pt-3 pb-0">
                     <div class="d-flex">
                         <span class="badge bg-success status-badge me-2">
-                            <i class="bi bi-play-fill me-1"></i>Activo
+                            {{ $project->estado->nombre ?? 'Sin estado' }}
                         </span>
                         <span class="badge bg-info area-badge">
-                            <i class="bi bi-mortarboard me-1"></i>Informática
+                            {{ $project->areaAcademica->nombre ?? 'Sin área' }}
                         </span>
                     </div>
-                    <!-- Vista de tarjetas -->
                     <div class="dropdown">
                         <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-three-dots-vertical"></i>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ url('/proyectos/1/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/proyectos/'.$project->id.'/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
                             <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
+                            <li>
+                                <form action="{{ route('proyectos.destroy', $project->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="dropdown-item text-danger" onclick="return confirm('¿Seguro que deseas eliminar este proyecto?')">
+                                        <i class="bi bi-trash me-2"></i>Eliminar
+                                    </button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="card-body pt-2">
                     <h5 class="card-title fw-bold">
-                        <a href="{{ url('/proyectos/1') }}" class="text-decoration-none text-dark stretched-link">Proyecto de Salud Comunitaria</a>
+                        <a href="{{ url('/proyectos/'.$project->id) }}" class="text-decoration-none text-dark stretched-link">{{ $project->nombre }}</a>
                     </h5>
-                    <p class="card-text text-muted small mb-3 line-clamp-2">Implementación de programa de salud preventiva en comunidades rurales con enfoque en adultos mayores y niños.</p>
-                    
+                    <p class="card-text text-muted small mb-3 line-clamp-2">{{ $project->descripcion_general }}</p>
                     <div class="mb-3">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-person-badge text-primary me-2"></i>
                             <div>
                                 <small class="text-muted d-block">Responsable</small>
-                                <span class="fw-medium">María González</span>
+                                <span class="fw-medium">{{ $project->responsable }}</span>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
-                            <i class="bi bi-people text-primary me-2"></i>
+                            <i class="bi bi-envelope text-primary me-2"></i>
                             <div>
-                                <small class="text-muted d-block">Stakeholder</small>
-                                <span class="fw-medium">Hospital Regional</span>
+                                <small class="text-muted d-block">Correo</small>
+                                <span class="fw-medium">{{ $project->correo_responsable }}</span>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ $project->progreso }}%;" aria-valuenow="{{ $project->progreso }}" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    
                     <div class="d-flex justify-content-between">
                         <div class="d-flex align-items-center">
                             <i class="bi bi-calendar-event text-muted me-1"></i>
-                            <small>15/03/2025</small>
+                            <small>{{ \Carbon\Carbon::parse($project->fecha_inicio)->format('d/m/Y') }}</small>
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="bi bi-calendar-check text-muted me-1"></i>
-                            <small>30/06/2025</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-person-check text-muted me-1"></i>
-                            <small>5 estudiantes</small>
+                            <small>{{ \Carbon\Carbon::parse($project->fecha_fin)->format('d/m/Y') }}</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Proyecto 2 -->
-        <div class="col">
-            <div class="card h-100 border-0 shadow-sm project-card">
-                <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 pt-3 pb-0">
-                    <div class="d-flex">
-                        <span class="badge bg-warning status-badge me-2">
-                            <i class="bi bi-gear me-1"></i>En Planificación
-                        </span>
-                        <span class="badge bg-info area-badge">
-                            <i class="bi bi-mortarboard me-1"></i>Salud
-                        </span>
-                    </div>
-                    <!-- Vista de tarjetas -->
-                    <div class="dropdown">
-                        <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ url('/proyectos/2/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body pt-2">
-                    <h5 class="card-title fw-bold">
-                        <a href="{{ url('/proyectos/2') }}" class="text-decoration-none text-dark stretched-link">Capacitación Digital</a>
-                    </h5>
-                    <p class="card-text text-muted small mb-3 line-clamp-2">Programa de alfabetización digital para adultos mayores con enfoque en herramientas de comunicación y acceso a servicios públicos digitales.</p>
-                    
-                    <div class="mb-3">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-person-badge text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Responsable</small>
-                                <span class="fw-medium">Carlos Martínez</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-people text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Stakeholder</small>
-                                <span class="fw-medium">Centro Adulto Mayor</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-event text-muted me-1"></i>
-                            <small>01/04/2025</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-check text-muted me-1"></i>
-                            <small>15/07/2025</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-person-check text-muted me-1"></i>
-                            <small>3 estudiantes</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Proyecto 3 -->
-        <div class="col">
-            <div class="card h-100 border-0 shadow-sm project-card">
-                <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 pt-3 pb-0">
-                    <div class="d-flex">
-                        <span class="badge bg-secondary status-badge me-2">
-                            <i class="bi bi-check-circle me-1"></i>Completado
-                        </span>
-                        <span class="badge bg-info area-badge">
-                            <i class="bi bi-mortarboard me-1"></i>Educación
-                        </span>
-                    </div>
-                    <!-- Vista de tarjetas -->
-                    <div class="dropdown">
-                        <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ url('/proyectos/2/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body pt-2">
-                    <h5 class="card-title fw-bold">
-                        <a href="{{ url('/proyectos/3') }}" class="text-decoration-none text-dark stretched-link">Apoyo Nutricional Escolar</a>
-                    </h5>
-                    <p class="card-text text-muted small mb-3 line-clamp-2">Evaluación nutricional y educación alimentaria en escuelas vulnerables para promover hábitos alimenticios saludables en la comunidad escolar.</p>
-                    
-                    <div class="mb-3">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-person-badge text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Responsable</small>
-                                <span class="fw-medium">Ana Rojas</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-people text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Stakeholder</small>
-                                <span class="fw-medium">Escuela Básica El Amanecer</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-event text-muted me-1"></i>
-                            <small>10/09/2024</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-check text-muted me-1"></i>
-                            <small>20/12/2024</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-person-check text-muted me-1"></i>
-                            <small>4 estudiantes</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Proyecto 4 -->
-        <div class="col">
-            <div class="card h-100 border-0 shadow-sm project-card">
-                <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 pt-3 pb-0">
-                    <div class="d-flex">
-                        <span class="badge bg-success status-badge me-2">
-                            <i class="bi bi-play-fill me-1"></i>Activo
-                        </span>
-                        <span class="badge bg-info area-badge">
-                            <i class="bi bi-mortarboard me-1"></i>Administración
-                        </span>
-                    </div>
-                    <!-- Vista de tarjetas -->
-                    <div class="dropdown">
-                        <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ url('/proyectos/2/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-body pt-2">
-                    <h5 class="card-title fw-bold">
-                        <a href="{{ url('/proyectos/4') }}" class="text-decoration-none text-dark stretched-link">Plataforma Ciudadana Municipal</a>
-                    </h5>
-                    <p class="card-text text-muted small mb-3 line-clamp-2">Desarrollo de plataforma web para facilitar trámites y mejorar comunicación entre ciudadanos y municipalidad.</p>
-                    
-                    <div class="mb-3">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-person-badge text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Responsable</small>
-                                <span class="fw-medium">Felipe Duarte</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-people text-primary me-2"></i>
-                            <div>
-                                <small class="text-muted d-block">Stakeholder</small>
-                                <span class="fw-medium">Municipalidad Isla de Maipo</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-event text-muted me-1"></i>
-                            <small>24/03/2025</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-check text-muted me-1"></i>
-                            <small>31/07/2025</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-person-check text-muted me-1"></i>
-                            <small>6 estudiantes</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
-    
+
     <!-- Vista de lista de proyectos (Tabla) -->
     <div class="card border-0 shadow-sm mb-4" id="list-view" style="display: none;">
         <div class="table-responsive">
@@ -425,7 +208,7 @@
                         <th scope="col" class="border-0">Proyecto</th>
                         <th scope="col" class="border-0">Área</th>
                         <th scope="col" class="border-0">Responsable</th>
-                        <th scope="col" class="border-0">Stakeholder</th>
+                        <th scope="col" class="border-0">Correo</th>
                         <th scope="col" class="border-0">Progreso</th>
                         <th scope="col" class="border-0">Fechas</th>
                         <th scope="col" class="border-0">Estado</th>
@@ -433,149 +216,48 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Proyecto 1 -->
+                    @foreach($projects as $project)
                     <tr>
                         <td>
-                            <div class="d-flex align-items-center">
-                                <span class="fw-medium">Proyecto de Salud Comunitaria</span>
-                            </div>
+                            <span class="fw-medium">{{ $project->nombre }}</span>
                         </td>
-                        <td><span class="badge bg-info"><i class="bi bi-mortarboard me-1"></i>Informática</span></td>
-                        <td>María González</td>
-                        <td>Hospital Regional</td>
+                        <td><span class="badge bg-info">{{ $project->areaAcademica->nombre ?? $project->area_academica_id }}</span></td>
+                        <td>{{ $project->responsable }}</td>
+                        <td>{{ $project->correo_responsable }}</td>
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="progress flex-grow-1 me-2" style="height: 6px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="small text-muted">65%</span>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ $project->progreso }}%;" aria-valuenow="{{ $project->progreso }}" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
+                            <span class="small text-muted">{{ $project->progreso }}%</span>
+                        </div>
                         </td>
-                        <td><small>15/03/2025 - 30/06/2025</small></td>
-                        <td><span class="badge bg-success">Activo</span></td>
+                        <td><small>{{ \Carbon\Carbon::parse($project->fecha_inicio)->format('d/m/Y') }} - {{ \Carbon\Carbon::parse($project->fecha_fin)->format('d/m/Y') }}</small></td>
+                        <td><span class="badge bg-success">{{ $project->estado->nombre ?? $project->estado_id }}</span></td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-three-dots-vertical"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/1') }}"><i class="bi bi-eye me-2"></i>Ver detalles</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/1/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/proyectos/'.$project->id) }}"><i class="bi bi-eye me-2"></i>Ver detalles</a></li>
+                                    <li><a class="dropdown-item" href="{{ url('/proyectos/'.$project->id.'/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
                                     <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
+                                    <li>
+                                        <form action="{{ route('proyectos.destroy', $project->id) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="dropdown-item text-danger" onclick="return confirm('¿Seguro que deseas eliminar este proyecto?')">
+                                                <i class="bi bi-trash me-2"></i>Eliminar
+                                            </button>
+                                        </form>
+                                    </li>
                                 </ul>
                             </div>
                         </td>
                     </tr>
-                    
-                    <!-- Proyecto 2 -->
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <span class="fw-medium">Capacitación Digital</span>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-info"><i class="bi bi-mortarboard me-1"></i>Salud</span></td>
-                        <td>Carlos Martínez</td>
-                        <td>Centro Adulto Mayor</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="progress flex-grow-1 me-2" style="height: 6px;">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="small text-muted">25%</span>
-                            </div>
-                        </td>
-                        <td><small>01/04/2025 - 15/07/2025</small></td>
-                        <td><span class="badge bg-warning text-dark">En Planificación</span></td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/2') }}"><i class="bi bi-eye me-2"></i>Ver detalles</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/2/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <!-- Proyecto 3 -->
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <span class="fw-medium">Apoyo Nutricional Escolar</span>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-info"><i class="bi bi-mortarboard me-1"></i>Educación</span></td>
-                        <td>Ana Rojas</td>
-                        <td>Escuela Básica El Amanecer</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="progress flex-grow-1 me-2" style="height: 6px;">
-                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="small text-muted">100%</span>
-                            </div>
-                        </td>
-                        <td><small>10/09/2024 - 20/12/2024</small></td>
-                        <td><span class="badge bg-secondary">Completado</span></td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/3') }}"><i class="bi bi-eye me-2"></i>Ver detalles</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/3/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>Duplicar</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    
-                    <!-- Proyecto 4 -->
-                    <tr>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <span class="fw-medium">Plataforma Ciudadana Municipal</span>
-                            </div>
-                        </td>
-                        <td><span class="badge bg-info"><i class="bi bi-mortarboard me-1"></i>Administración</span></td>
-                        <td>Felipe Duarte</td>
-                        <td>Municipalidad Isla de Maipo</td>
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <div class="progress flex-grow-1 me-2" style="height: 6px;">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <span class="small text-muted">75%</span>
-                            </div>
-                        </td>
-                        <td><small>24/03/2025 - 31/07/2025</small></td>
-                        <td><span class="badge bg-success">Activo</span></td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots-vertical"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/4') }}"><i class="bi bi-eye me-2"></i>Ver detalles</a></li>
-                                    <li><a class="dropdown-item" href="{{ url('/proyectos/4/editar') }}"><i class="bi bi-pencil me-2"></i>Editar</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

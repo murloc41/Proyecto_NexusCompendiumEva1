@@ -41,7 +41,7 @@
                         <label for="nombre_proyecto" class="form-label fw-semibold">Nombre del proyecto *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-bookmark-star"></i></span>
-                            <input type="text" class="form-control" id="nombre_proyecto" name="nombre_proyecto" required value="Proyecto de Salud Comunitaria">
+                            <input type="text" class="form-control" id="nombre_proyecto" name="nombre_proyecto" required value="{{ $project->nombre }}">
                             <div class="invalid-feedback">Por favor ingrese el nombre del proyecto.</div>
                         </div>
                     </div>
@@ -52,16 +52,16 @@
                             <span class="input-group-text"><i class="bi bi-mortarboard"></i></span>
                             <select class="form-select" id="area_academica" name="area_academica" required>
                                 <option value="" disabled>Seleccione un área académica</option>
-                                <option value="informatica" selected>Informática</option>
-                                <option value="administracion">Administración de Empresas</option>
-                                <option value="contabilidad">Contabilidad</option>
-                                <option value="marketing">Marketing Digital</option>
-                                <option value="diseno">Diseño Gráfico</option>
-                                <option value="turismo">Turismo</option>
-                                <option value="salud">Salud</option>
-                                <option value="ingenieria">Ingeniería</option>
-                                <option value="educacion">Educación</option>
-                                <option value="otra">Otra</option>
+                                <option value="informatica" {{ $project->area_academica == 'informatica' ? 'selected' : '' }}>Informática</option>
+                                <option value="administracion" {{ $project->area_academica == 'administracion' ? 'selected' : '' }}>Administración de Empresas</option>
+                                <option value="contabilidad" {{ $project->area_academica == 'contabilidad' ? 'selected' : '' }}>Contabilidad</option>
+                                <option value="marketing" {{ $project->area_academica == 'marketing' ? 'selected' : '' }}>Marketing Digital</option>
+                                <option value="diseno" {{ $project->area_academica == 'diseno' ? 'selected' : '' }}>Diseño Gráfico</option>
+                                <option value="turismo" {{ $project->area_academica == 'turismo' ? 'selected' : '' }}>Turismo</option>
+                                <option value="salud" {{ $project->area_academica == 'salud' ? 'selected' : '' }}>Salud</option>
+                                <option value="ingenieria" {{ $project->area_academica == 'ingenieria' ? 'selected' : '' }}>Ingeniería</option>
+                                <option value="educacion" {{ $project->area_academica == 'educacion' ? 'selected' : '' }}>Educación</option>
+                                <option value="otra" {{ $project->area_academica == 'otra' ? 'selected' : '' }}>Otra</option>
                             </select>
                             <div class="invalid-feedback">Por favor seleccione un área académica.</div>
                         </div>
@@ -73,10 +73,10 @@
                             <span class="input-group-text"><i class="bi bi-check2-circle"></i></span>
                             <select class="form-select" id="estado_proyecto" name="estado_proyecto" required>
                                 <option value="" disabled>Seleccione el estado</option>
-                                <option value="activo" selected>Activo</option>
-                                <option value="planificacion">En Planificación</option>
-                                <option value="completado">Completado</option>
-                                <option value="archivado">Archivado</option>
+                                <option value="activo" {{ $project->estado_proyecto == 'activo' ? 'selected' : '' }}>Activo</option>
+                                <option value="planificacion" {{ $project->estado_proyecto == 'planificacion' ? 'selected' : '' }}>En Planificación</option>
+                                <option value="completado" {{ $project->estado_proyecto == 'completado' ? 'selected' : '' }}>Completado</option>
+                                <option value="archivado" {{ $project->estado_proyecto == 'archivado' ? 'selected' : '' }}>Archivado</option>
                             </select>
                             <div class="invalid-feedback">Por favor seleccione el estado actual.</div>
                         </div>
@@ -86,7 +86,7 @@
                         <label for="fecha_inicio" class="form-label fw-semibold">Fecha de inicio *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
-                            <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required value="2025-03-15">
+                            <input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio" required value="{{ $project->fecha_inicio }}">
                             <div class="invalid-feedback">Por favor seleccione una fecha de inicio.</div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <label for="fecha_fin" class="form-label fw-semibold">Fecha estimada de finalización *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
-                            <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required value="2025-11-15">
+                            <input type="date" class="form-control" id="fecha_fin" name="fecha_fin" required value="{{ $project->fecha_fin }}">
                             <div class="invalid-feedback">Por favor seleccione una fecha estimada de finalización.</div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                         <label for="responsable" class="form-label fw-semibold">Responsable del proyecto *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
-                            <input type="text" class="form-control" id="responsable" name="responsable" required value="María González">
+                            <input type="text" class="form-control" id="responsable" name="responsable" required value="{{ $project->responsable }}">
                             <div class="invalid-feedback">Por favor ingrese el nombre del responsable.</div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                         <label for="correo_responsable" class="form-label fw-semibold">Correo del responsable *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                            <input type="email" class="form-control" id="correo_responsable" name="correo_responsable" required value="maria.gonzalez@email.com">
+                            <input type="email" class="form-control" id="correo_responsable" name="correo_responsable" required value="{{ $project->correo_responsable }}">
                             <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.</div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                         <label for="stakeholders" class="form-label fw-semibold">Stakeholders clave *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-people"></i></span>
-                            <input type="text" class="form-control" id="stakeholders" name="stakeholders" required value="Centro de Salud Rural">
+                            <input type="text" class="form-control" id="stakeholders" name="stakeholders" required value="{{ $project->stakeholders }}">
                             <div class="invalid-feedback">Por favor ingrese los stakeholders clave.</div>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                         <label for="progreso" class="form-label fw-semibold">Progreso actual (%) *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-graph-up"></i></span>
-                            <input type="number" class="form-control" id="progreso" name="progreso" min="0" max="100" required value="65">
+                            <input type="number" class="form-control" id="progreso" name="progreso" min="0" max="100" required value="{{ $project->progreso }}">
                             <span class="input-group-text">%</span>
                             <div class="invalid-feedback">Por favor ingrese el progreso del proyecto (0-100%).</div>
                         </div>
@@ -156,7 +156,7 @@
                         <label for="descripcion_general" class="form-label fw-semibold">Descripción general del proyecto *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                            <textarea class="form-control" id="descripcion_general" name="descripcion_general" rows="3" required>Este proyecto tiene como objetivo implementar un programa integral de salud preventiva en comunidades rurales de la región. El enfoque principal es mejorar el acceso a servicios de salud básicos y promover hábitos saludables entre la población.</textarea>
+                            <textarea class="form-control" id="descripcion_general" name="descripcion_general" rows="3" required>{{ $project->descripcion_general }}</textarea>
                             <div class="invalid-feedback">Por favor ingrese una descripción general del proyecto.</div>
                         </div>
                     </div>
@@ -165,10 +165,7 @@
                         <label for="funcionalidades_principales" class="form-label fw-semibold">Funcionalidades principales *</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-list-check"></i></span>
-                            <textarea class="form-control" id="funcionalidades_principales" name="funcionalidades_principales" rows="3" required>- Establecer puntos de atención básica en salud
-- Capacitar a promotores de salud comunitarios
-- Implementar programas de educación nutricional
-- Desarrollar campañas de prevención de enfermedades</textarea>
+                            <textarea class="form-control" id="funcionalidades_principales" name="funcionalidades_principales" rows="3" required>{{ $project->funcionalidades_principales }}</textarea>
                             <div class="invalid-feedback">Por favor ingrese las funcionalidades principales.</div>
                         </div>
                     </div>
@@ -177,9 +174,7 @@
                         <label for="restricciones" class="form-label fw-semibold">Restricciones o consideraciones técnicas</label>
                         <div class="input-group">
                             <span class="input-group-text"><i class="bi bi-exclamation-triangle"></i></span>
-                            <textarea class="form-control" id="restricciones" name="restricciones" rows="3">- Acceso limitado a internet en zonas rurales
-- Restricciones de presupuesto para equipamiento médico
-- Necesidad de compatibilidad con sistemas existentes del Ministerio de Salud</textarea>
+                            <textarea class="form-control" id="restricciones" name="restricciones" rows="3">{{ $project->restricciones }}</textarea>
                         </div>
                     </div>
                 </div>

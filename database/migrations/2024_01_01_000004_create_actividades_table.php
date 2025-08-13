@@ -22,13 +22,11 @@ return new class extends Migration
         Schema::create('actividades', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tipo_id')->constrained('tipo_actividad');
-            $table->morphs('activable'); // Polimórfico: puede estar relacionado con un proyecto, actor, etc.
+            $table->morphs('activable'); // Esto ya crea el índice necesario
             $table->string('titulo', 150);
             $table->text('descripcion')->nullable();
             $table->foreignId('usuario_id')->nullable()->constrained('users');
             $table->timestamps();
-            
-            $table->index(['activable_type', 'activable_id']);
         });
 
         // Eventos en la línea de tiempo del proyecto

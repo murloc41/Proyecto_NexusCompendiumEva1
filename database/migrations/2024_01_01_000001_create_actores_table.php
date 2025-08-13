@@ -26,7 +26,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('actores', function (Blueprint $table) {
+        Schema::create('actors', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 150);
             $table->foreignId('tipo_id')->constrained('tipos_actor');
@@ -81,7 +81,7 @@ return new class extends Migration
         Schema::dropIfExists('contactos');
         Schema::dropIfExists('actor_area');
         Schema::dropIfExists('areas_interes');
-        Schema::dropIfExists('actores');
+        Schema::dropIfExists('actors');
         Schema::dropIfExists('regiones');
         Schema::dropIfExists('tipos_actor');
     }

@@ -30,7 +30,7 @@ return new class extends Migration
             $table->foreignId('usuario_id')->nullable()->constrained('users');
             $table->timestamps();
             
-            $table->index(['documentable_type', 'documentable_id']);
+           
         });
     }
 

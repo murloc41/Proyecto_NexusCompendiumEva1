@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 // Ruta principal - Página de bienvenida
 Route::get('/', function () {
@@ -8,32 +9,7 @@ Route::get('/', function () {
 });
 
 // Rutas para proyectos
-Route::get('/proyectos', function () {
-    return view('proyectos.index');
-});
-
-Route::get('/proyectos/crear', function () {
-    return view('proyectos.create');
-});
-
-Route::get('/proyectos/{id}', function ($id) {
-    return view('proyectos.show', ['id' => $id]);
-});
-
-Route::get('/proyectos/{id}/editar', function ($id) {
-    return view('proyectos.edit', ['id' => $id]);
-});
-
-// POST para procesar formularios de proyectos
-Route::post('/proyectos', function () {
-    // Aquí iría el código para procesar la creación del proyecto
-    return redirect('/proyectos')->with('success', 'Proyecto creado exitosamente');
-});
-
-Route::put('/proyectos/{id}', function ($id) {
-    // Aquí iría el código para procesar la actualización del proyecto
-    return redirect('/proyectos/'.$id)->with('success', 'Proyecto actualizado exitosamente');
-});
+Route::resource('proyectos', ProjectController::class);
 
 // Rutas para actores de interés
 Route::get('/actores', function () {
@@ -103,3 +79,7 @@ Route::get('/dashboard', function () {
 Route::get('/institutos', function () {
     return redirect('/actores');
 });
+
+
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');

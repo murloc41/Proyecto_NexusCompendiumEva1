@@ -14,7 +14,7 @@
                 </ol>
             </nav>
             <div class="d-flex align-items-center">
-                <h1 class="mb-0 fw-bold">Proyecto de Salud Comunitaria</h1>
+                <h1 class="mb-0 fw-bold">{{ $project->nombre }}</h1>
                 <span class="badge bg-success ms-3 px-3 py-2"><i class="bi bi-play-fill me-1"></i>Activo</span>
                 <span class="badge bg-info ms-2 px-3 py-2"><i class="bi bi-mortarboard me-1"></i>Informática</span>
             </div>
@@ -47,7 +47,7 @@
                 <div class="card-body">
                     <div class="mb-3">
                         <small class="text-muted d-block">Descripción del proyecto</small>
-                        <p class="mb-0">Este proyecto tiene como objetivo implementar un programa integral de salud preventiva en comunidades rurales de la región. El enfoque principal es mejorar el acceso a servicios de salud básicos y promover hábitos saludables entre la población.</p>
+                        <p class="mb-0">{{ $project->descripcion_general }}</p>
                     </div>
                     <div class="progress mb-2" style="height: 10px;">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
@@ -168,7 +168,7 @@
                                     <h6 class="text-muted mb-3">Información general</h6>
                                     <div class="mb-2">
                                         <small class="text-muted d-block">Nombre del proyecto</small>
-                                        <p class="mb-0 fw-medium">Proyecto de Salud Comunitaria</p>
+                                        <p class="mb-0 fw-medium">{{ $project->nombre }}</p>
                                     </div>
                                     <div class="mb-2">
                                         <small class="text-muted d-block">Área académica</small>
