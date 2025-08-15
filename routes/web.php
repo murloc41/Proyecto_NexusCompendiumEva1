@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ChatGPTController;
 
 // Ruta principal - Página de bienvenida
 Route::get('/', function () {
@@ -80,6 +81,12 @@ Route::get('/institutos', function () {
     return redirect('/actores');
 });
 
-
-
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+
+// Vista del asistente
+Route::get('/chatgpt', function () {
+    return view('components.chatgpt');
+})->name('chatgpt.view');
+
+// API para la petición a ChatGPT
+Route::post('/chatgpt/ask', [ChatGPTController::class, 'askChatGPT'])->name('chatgpt.ask');

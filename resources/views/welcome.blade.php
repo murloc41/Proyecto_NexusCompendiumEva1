@@ -239,6 +239,29 @@
     </div>
 </div>
 
+<!-- Botón flotante de ayuda -->
+<div id="help-assistant" style="position: fixed; right: 32px; bottom: 32px; z-index: 9999;">
+    <button type="button" class="btn btn-dark d-flex align-items-center shadow-lg" data-bs-toggle="modal" data-bs-target="#chatgptModal" style="border-radius: 50px; padding: 0.75rem 1.25rem;">
+        <img src="{{ asset('images/Un logo para un asis.png') }}" alt="Asistente de Ayuda" style="width: 40px; height: 40px; margin-right: 10px;">
+        <span class="fw-bold d-none d-md-inline">Ayuda</span>
+    </button>
+</div>
+
+<!-- ÚNICO Modal del asistente de ayuda -->
+<div class="modal fade" id="chatgptModal" tabindex="-1" aria-labelledby="chatgptModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="chatgptModalLabel"><i class="bi bi-robot me-2"></i>Asistente de Ayuda</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-0">
+        @include('components.chatgpt')
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
     // Script para activar animaciones al hacer scroll
     document.addEventListener('DOMContentLoaded', function() {
