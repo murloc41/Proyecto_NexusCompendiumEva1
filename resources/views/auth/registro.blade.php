@@ -6,7 +6,7 @@
 <div class="register-container">
     <div class="register-card">
         <div class="register-header">
-            <img src="/images/logo.png?v=<?php echo time(); ?>" alt="Nexus Compendium Logo" class="logo">
+            <img src="/images/logo.png" alt="Nexus Compendium Logo" class="logo">
             <h1>Crear Cuenta</h1>
             <p>Únete a la plataforma Nexus Compendium</p>
         </div>

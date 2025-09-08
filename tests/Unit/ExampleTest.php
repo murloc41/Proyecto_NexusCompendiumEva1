@@ -1,9 +1,9 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/Integracion_ia_eduardo
+test('that true is true', function () {
+    expect(true)->toBeTrue();
+});
+
 namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
@@ -18,11 +18,3 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 }
-<<<<<<< HEAD
-=======
-test('that true is true', function () {
-    expect(true)->toBeTrue();
-});
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo

@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Crear la Aplicación
-|--------------------------------------------------------------------------
-|
-| Lo primero que haremos es crear una nueva instancia de la aplicación Laravel
-| que sirve como "pegamento" para todos los componentes de Laravel, y es
-| el contenedor IoC del sistema que une todas las partes.
-|
-*/
-
-// Bootstrap de aplicación para Nexus Compendium
 require_once __DIR__ . '/../bootstrap.php';
 
 echo "Nexus Compendium - Laravel Application Bootstrap\n";
@@ -58,11 +44,7 @@ $app = [
 */
 
 return $app;
-=======
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo
+
 <?php
 
 use Illuminate\Foundation\Application;
@@ -81,10 +63,3 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo

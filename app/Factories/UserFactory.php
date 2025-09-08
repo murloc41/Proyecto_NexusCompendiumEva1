@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <?php
 
 namespace App\Factories;
@@ -269,7 +268,3 @@ class UserFactory
         return $this;
     }
 }
-<<<<<<< HEAD
->>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
-=======
->>>>>>> origin/Integracion_ia_eduardo
