@@ -7,7 +7,11 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
+<<<<<<< HEAD
      * Ejecuta las migraciones.
+=======
+     * Run the migrations.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function up(): void
     {
@@ -35,7 +39,11 @@ return new class extends Migration
     }
 
     /**
+<<<<<<< HEAD
      * Revierte las migraciones.
+=======
+     * Reverse the migrations.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function down(): void
     {

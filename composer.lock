@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
@@ -21,6 +22,8 @@
 =======
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
@@ -28,10 +31,14 @@
         "This file is @generated automatically"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "content-hash": "66d0b9e048776ef579f53ee167d2d2d6",
 =======
     "content-hash": "0115dbddccf0cd5bb3f8d9794226947f",
 >>>>>>> origin/Cambios__Sofia
+=======
+    "content-hash": "66d0b9e048776ef579f53ee167d2d2d6",
+>>>>>>> origin/Integracion_ia_eduardo
     "packages": [
         {
             "name": "brick/math",
@@ -240,6 +247,9 @@
         {
             "name": "doctrine/inflector",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "2.0.10",
             "source": {
                 "type": "git",
@@ -250,6 +260,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/inflector/zipball/5817d0659c5b50c9b950feb9af7b9668e2c436bc",
                 "reference": "5817d0659c5b50c9b950feb9af7b9668e2c436bc",
+<<<<<<< HEAD
 =======
             "version": "2.1.0",
             "source": {
@@ -262,6 +273,8 @@
                 "url": "https://api.github.com/repos/doctrine/inflector/zipball/6d6c96277ea252fc1304627204c3d5e6e15faa3b",
                 "reference": "6d6c96277ea252fc1304627204c3d5e6e15faa3b",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -269,12 +282,16 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "doctrine/coding-standard": "^11.0",
                 "phpstan/phpstan": "^1.8",
                 "phpstan/phpstan-phpunit": "^1.1",
                 "phpstan/phpstan-strict-rules": "^1.3",
                 "phpunit/phpunit": "^8.5 || ^9.5",
                 "vimeo/psalm": "^4.25 || ^5.4"
+<<<<<<< HEAD
 =======
                 "doctrine/coding-standard": "^12.0 || ^13.0",
                 "phpstan/phpstan": "^1.12 || ^2.0",
@@ -282,15 +299,21 @@
                 "phpstan/phpstan-strict-rules": "^1.6 || ^2.0",
                 "phpunit/phpunit": "^8.5 || ^12.2"
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
 =======
                     "Doctrine\\Inflector\\": "src"
 >>>>>>> origin/Cambios__Sofia
+=======
+                    "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
+>>>>>>> origin/Integracion_ia_eduardo
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -336,10 +359,14 @@
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/doctrine/inflector/tree/2.0.10"
 =======
                 "source": "https://github.com/doctrine/inflector/tree/2.1.0"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/doctrine/inflector/tree/2.0.10"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
@@ -356,10 +383,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2024-02-18T20:23:39+00:00"
 =======
             "time": "2025-08-10T19:31:58+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+            "time": "2024-02-18T20:23:39+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "doctrine/lexer",
@@ -1117,6 +1148,9 @@
         {
             "name": "laravel/framework",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "v12.21.0",
             "source": {
                 "type": "git",
@@ -1127,6 +1161,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
                 "reference": "ac8c4e73bf1b5387b709f7736d41427e6af1c93b",
+<<<<<<< HEAD
 =======
             "version": "v12.24.0",
             "source": {
@@ -1139,6 +1174,8 @@
                 "url": "https://api.github.com/repos/laravel/framework/zipball/6dcf2c46da23d159f35d6246234953a74b740d83",
                 "reference": "6dcf2c46da23d159f35d6246234953a74b740d83",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -1180,10 +1217,13 @@
                 "symfony/mime": "^7.2.0",
                 "symfony/polyfill-php83": "^1.31",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 "symfony/polyfill-php84": "^1.31",
                 "symfony/polyfill-php85": "^1.31",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "symfony/process": "^7.2.0",
                 "symfony/routing": "^7.2.0",
                 "symfony/uid": "^7.2.0",
@@ -1252,10 +1292,14 @@
                 "league/flysystem-sftp-v3": "^3.25.1",
                 "mockery/mockery": "^1.6.10",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "orchestra/testbench-core": "^10.0.0",
 =======
                 "orchestra/testbench-core": "^10.6.0",
 >>>>>>> origin/Cambios__Sofia
+=======
+                "orchestra/testbench-core": "^10.0.0",
+>>>>>>> origin/Integracion_ia_eduardo
                 "pda/pheanstalk": "^5.0.6|^7.0.0",
                 "php-http/discovery": "^1.15",
                 "phpstan/phpstan": "^2.0",
@@ -1350,10 +1394,14 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-07-22T15:41:55+00:00"
 =======
             "time": "2025-08-13T20:30:36+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+            "time": "2025-07-22T15:41:55+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "laravel/prompts",
@@ -2454,6 +2502,9 @@
         {
             "name": "nikic/php-parser",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "v5.6.0",
             "source": {
                 "type": "git",
@@ -2464,6 +2515,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/221b0d0fdf1369c71047ad1d18bb5880017bbc56",
                 "reference": "221b0d0fdf1369c71047ad1d18bb5880017bbc56",
+<<<<<<< HEAD
 =======
             "version": "v5.6.1",
             "source": {
@@ -2476,6 +2528,8 @@
                 "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
                 "reference": "f103601b29efebd7ff4a1ca7b3eeea9e3336a2a2",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -2495,10 +2549,14 @@
             "extra": {
                 "branch-alias": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "dev-master": "5.0-dev"
 =======
                     "dev-master": "5.x-dev"
 >>>>>>> origin/Cambios__Sofia
+=======
+                    "dev-master": "5.0-dev"
+>>>>>>> origin/Integracion_ia_eduardo
                 }
             },
             "autoload": {
@@ -2523,6 +2581,7 @@
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.0"
             },
             "time": "2025-07-27T20:03:57+00:00"
@@ -2531,6 +2590,11 @@
             },
             "time": "2025-08-13T20:13:15+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.0"
+            },
+            "time": "2025-07-27T20:03:57+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "nunomaduro/termwind",
@@ -4924,6 +4988,7 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             "name": "symfony/polyfill-php84",
             "version": "v1.32.0",
@@ -5078,6 +5143,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "symfony/polyfill-uuid",
             "version": "v1.32.0",
             "source": {
@@ -6090,6 +6157,7 @@
     "packages-dev": [
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             "name": "brianium/paratest",
             "version": "v7.8.3",
@@ -6233,6 +6301,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "fakerphp/faker",
             "version": "v1.24.1",
             "source": {
@@ -6297,6 +6367,9 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "filp/whoops",
             "version": "2.18.3",
             "source": {
@@ -6308,6 +6381,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
                 "reference": "59a123a3d459c5a23055802237cb317f609867e5",
+<<<<<<< HEAD
 =======
             "name": "fidry/cpu-core-counter",
             "version": "1.3.0",
@@ -6382,6 +6456,8 @@
                 "url": "https://api.github.com/repos/filp/whoops/zipball/d2102955e48b9fd9ab24280a7ad12ed552752c4d",
                 "reference": "d2102955e48b9fd9ab24280a7ad12ed552752c4d",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -6432,10 +6508,14 @@
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/filp/whoops/tree/2.18.3"
 =======
                 "source": "https://github.com/filp/whoops/tree/2.18.4"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
@@ -6444,10 +6524,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-06-16T00:02:10+00:00"
 =======
             "time": "2025-08-08T12:00:00+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+            "time": "2025-06-16T00:02:10+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -6501,6 +6585,7 @@
             "time": "2025-04-30T06:54:44+00:00"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             "name": "jean85/pretty-package-versions",
@@ -6625,6 +6710,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "laravel/pail",
             "version": "v1.2.3",
             "source": {
@@ -7079,6 +7166,7 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             "name": "pestphp/pest",
             "version": "v3.8.2",
@@ -7479,6 +7567,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "phar-io/manifest",
             "version": "2.0.4",
             "source": {
@@ -7597,6 +7687,7 @@
             "time": "2022-02-21T01:04:05+00:00"
         },
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             "name": "phpdocumentor/reflection-common",
@@ -7822,6 +7913,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "phpunit/php-code-coverage",
             "version": "11.0.10",
             "source": {
@@ -8159,6 +8252,9 @@
         {
             "name": "phpunit/phpunit",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "11.5.28",
             "source": {
                 "type": "git",
@@ -8169,6 +8265,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/93f30aa3889e785ac63493d4976df0ae9fdecb60",
                 "reference": "93f30aa3889e785ac63493d4976df0ae9fdecb60",
+<<<<<<< HEAD
 =======
             "version": "11.5.15",
             "source": {
@@ -8181,6 +8278,8 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4b6a4ee654e5e0c5e1f17e2f83c0f4c91dee1f9c",
                 "reference": "4b6a4ee654e5e0c5e1f17e2f83c0f4c91dee1f9c",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -8191,11 +8290,15 @@
                 "ext-xml": "*",
                 "ext-xmlwriter": "*",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "myclabs/deep-copy": "^1.13.3",
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.2",
                 "phpunit/php-code-coverage": "^11.0.10",
+<<<<<<< HEAD
 =======
                 "myclabs/deep-copy": "^1.13.0",
                 "phar-io/manifest": "^2.0.4",
@@ -8203,6 +8306,8 @@
                 "php": ">=8.2",
                 "phpunit/php-code-coverage": "^11.0.9",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
@@ -8212,10 +8317,14 @@
                 "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "sebastian/environment": "^7.2.1",
 =======
                 "sebastian/environment": "^7.2.0",
 >>>>>>> origin/Cambios__Sofia
+=======
+                "sebastian/environment": "^7.2.1",
+>>>>>>> origin/Integracion_ia_eduardo
                 "sebastian/exporter": "^6.3.0",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
@@ -8265,10 +8374,14 @@
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.28"
 =======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.15"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.28"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
@@ -8281,6 +8394,9 @@
                 },
                 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                     "url": "https://liberapay.com/sebastianbergmann",
                     "type": "liberapay"
                 },
@@ -8289,17 +8405,24 @@
                     "type": "thanks_dev"
                 },
                 {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                     "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit",
                     "type": "tidelift"
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2025-07-31T07:10:28+00:00"
 =======
             "time": "2025-03-23T16:02:11+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+            "time": "2025-07-31T07:10:28+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "sebastian/cli-parser",
@@ -8474,6 +8597,9 @@
         {
             "name": "sebastian/comparator",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "6.3.1",
             "source": {
                 "type": "git",
@@ -8484,6 +8610,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/24b8fbc2c8e201bb1308e7b05148d6ab393b6959",
                 "reference": "24b8fbc2c8e201bb1308e7b05148d6ab393b6959",
+<<<<<<< HEAD
 =======
             "version": "6.3.2",
             "source": {
@@ -8496,6 +8623,8 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/85c77556683e6eee4323e4c5468641ca0237e2e8",
                 "reference": "85c77556683e6eee4323e4c5468641ca0237e2e8",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -8555,15 +8684,20 @@
                 "issues": "https://github.com/sebastianbergmann/comparator/issues",
                 "security": "https://github.com/sebastianbergmann/comparator/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/comparator/tree/6.3.1"
 =======
                 "source": "https://github.com/sebastianbergmann/comparator/tree/6.3.2"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/sebastianbergmann/comparator/tree/6.3.1"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }
             ],
@@ -8585,6 +8719,11 @@
             ],
             "time": "2025-08-10T08:07:46+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+                }
+            ],
+            "time": "2025-03-07T06:57:01+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "sebastian/complexity",
@@ -9102,6 +9241,9 @@
         {
             "name": "sebastian/recursion-context",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "version": "6.0.2",
             "source": {
                 "type": "git",
@@ -9112,6 +9254,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/694d156164372abbd149a4b85ccda2e4670c0e16",
                 "reference": "694d156164372abbd149a4b85ccda2e4670c0e16",
+<<<<<<< HEAD
 =======
             "version": "6.0.3",
             "source": {
@@ -9124,6 +9267,8 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/f6458abbf32a6c8174f8f26261475dc133b3d9dc",
                 "reference": "f6458abbf32a6c8174f8f26261475dc133b3d9dc",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -9131,10 +9276,14 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "phpunit/phpunit": "^11.0"
 =======
                 "phpunit/phpunit": "^11.3"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "phpunit/phpunit": "^11.0"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "type": "library",
             "extra": {
@@ -9171,16 +9320,23 @@
                 "issues": "https://github.com/sebastianbergmann/recursion-context/issues",
                 "security": "https://github.com/sebastianbergmann/recursion-context/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/recursion-context/tree/6.0.2"
 =======
                 "source": "https://github.com/sebastianbergmann/recursion-context/tree/6.0.3"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/sebastianbergmann/recursion-context/tree/6.0.2"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 }
             ],
             "time": "2024-07-03T05:10:34+00:00"
@@ -9197,6 +9353,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/a8a7e30534b0eb0c77cd9d07e82de1a114389f5e",
                 "reference": "a8a7e30534b0eb0c77cd9d07e82de1a114389f5e",
+<<<<<<< HEAD
 =======
                 },
                 {
@@ -9227,6 +9384,8 @@
                 "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/f77d2d4e78738c98d9a68d2596fe5e8fa380f449",
                 "reference": "f77d2d4e78738c98d9a68d2596fe5e8fa380f449",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                 "shasum": ""
             },
             "require": {
@@ -9263,15 +9422,20 @@
                 "issues": "https://github.com/sebastianbergmann/type/issues",
                 "security": "https://github.com/sebastianbergmann/type/security/policy",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/type/tree/5.1.2"
 =======
                 "source": "https://github.com/sebastianbergmann/type/tree/5.1.3"
 >>>>>>> origin/Cambios__Sofia
+=======
+                "source": "https://github.com/sebastianbergmann/type/tree/5.1.2"
+>>>>>>> origin/Integracion_ia_eduardo
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }
             ],
@@ -9293,6 +9457,11 @@
             ],
             "time": "2025-08-09T06:55:48+00:00"
 >>>>>>> origin/Cambios__Sofia
+=======
+                }
+            ],
+            "time": "2025-03-18T13:35:50+00:00"
+>>>>>>> origin/Integracion_ia_eduardo
         },
         {
             "name": "sebastian/version",
@@ -9478,6 +9647,7 @@
         },
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             "name": "ta-tikoma/phpunit-architecture-test",
             "version": "0.8.5",
@@ -9539,6 +9709,8 @@
         },
         {
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
             "name": "theseer/tokenizer",
             "version": "1.2.3",
             "source": {
@@ -9601,6 +9773,9 @@
     "plugin-api-version": "2.6.0"
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

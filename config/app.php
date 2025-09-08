@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 return [
@@ -53,6 +54,8 @@ return [
 =======
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 return [
@@ -180,6 +183,9 @@ return [
 
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

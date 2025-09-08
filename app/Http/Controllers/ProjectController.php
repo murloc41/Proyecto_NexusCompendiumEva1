@@ -7,12 +7,17 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
+<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth');
     }
     /**
      * Muestra un listado de los recursos.
+=======
+    /**
+     * Display a listing of the resource.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function index(Request $request)
     {
@@ -51,7 +56,11 @@ class ProjectController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * Muestra el formulario para crear un nuevo recurso.
+=======
+     * Show the form for creating a new resource.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function create()
     {
@@ -62,10 +71,14 @@ class ProjectController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * Almacena un nuevo recurso Proyecto en la base de datos.
      *
      * Valida los datos del formulario, asocia el proyecto al usuario autenticado
      * y redirige con mensaje de éxito.
+=======
+     * Store a newly created resource in storage.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function store(Request $request)
     {
@@ -83,6 +96,7 @@ class ProjectController extends Controller
             'funcionalidades_principales' => 'required|string',
             'restricciones' => 'nullable|string',
         ]);
+<<<<<<< HEAD
     $validated['user_id'] = auth()->id();
     Project::create($validated);
     return redirect()->route('proyectos.index')->with('success', 'Proyecto creado correctamente.');
@@ -90,6 +104,14 @@ class ProjectController extends Controller
 
     /**
      * Muestra el recurso especificado.
+=======
+        Project::create($validated);
+        return redirect()->route('proyectos.index')->with('success', 'Proyecto creado correctamente.');
+    }
+
+    /**
+     * Display the specified resource.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function show($id)
     {
@@ -98,7 +120,11 @@ class ProjectController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * Muestra el formulario para editar el recurso especificado.
+=======
+     * Show the form for editing the specified resource.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function edit($id)
     {
@@ -110,7 +136,11 @@ class ProjectController extends Controller
     }
 
     /**
+<<<<<<< HEAD
      * Actualiza el recurso especificado en almacenamiento.
+=======
+     * Update the specified resource in storage.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function update(Request $request, $id)
     {
@@ -129,6 +159,7 @@ class ProjectController extends Controller
             'restricciones' => 'nullable|string',
         ]);
         $project = Project::findOrFail($id);
+<<<<<<< HEAD
         if ($project->user_id !== auth()->id()) {
             abort(403, 'No autorizado');
         }
@@ -138,13 +169,24 @@ class ProjectController extends Controller
 
     /**
      * Elimina el recurso especificado del almacenamiento.
+=======
+        $project->update($validated);
+        return redirect()->route('proyectos.index')->with('success', 'Proyecto actualizado correctamente.');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+>>>>>>> origin/Integracion_ia_eduardo
      */
     public function destroy($id)
     {
         $project = Project::findOrFail($id);
+<<<<<<< HEAD
         if ($project->user_id !== auth()->id()) {
             abort(403, 'No autorizado');
         }
+=======
+>>>>>>> origin/Integracion_ia_eduardo
         $project->delete();
         return redirect()->route('proyectos.index')->with('success', 'Proyecto eliminado correctamente.');
     }

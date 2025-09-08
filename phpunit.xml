@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
@@ -33,9 +31,6 @@
         <env name="NIGHTWATCH_ENABLED" value="false"/>
     </php>
 </phpunit>
-=======
-=======
->>>>>>> origin/Cambios__Sofia
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
@@ -71,6 +66,9 @@
     </php>
 </phpunit>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

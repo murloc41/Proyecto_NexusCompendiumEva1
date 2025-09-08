@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 *.log
 .DS_Store
 .env
@@ -23,7 +26,10 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+<<<<<<< HEAD
 =======
 *
 !.gitignore
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

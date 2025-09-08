@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 // Autoloader básico para el proyecto
@@ -102,6 +103,8 @@ if (!class_exists('Str')) {
     }
 }
 =======
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 // Autoloader básico para el proyecto
@@ -204,4 +207,7 @@ if (!class_exists('Str')) {
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Integracion_ia_eduardo

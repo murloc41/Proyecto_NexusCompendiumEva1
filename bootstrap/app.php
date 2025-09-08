@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 /*
@@ -60,6 +61,8 @@ return $app;
 =======
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 use Illuminate\Foundation\Application;
@@ -79,6 +82,9 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

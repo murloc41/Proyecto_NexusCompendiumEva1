@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 /**
@@ -11,6 +12,8 @@
 require_once __DIR__ . '/public/index.php';
 ?>
 =======
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 /**
@@ -22,4 +25,7 @@ require_once __DIR__ . '/public/index.php';
 // Redirigir directamente a public/index.php
 require_once __DIR__ . '/public/index.php';
 ?>
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Integracion_ia_eduardo

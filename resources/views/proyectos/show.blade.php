@@ -23,6 +23,7 @@
             <button class="btn btn-outline-secondary me-2">
                 <i class="bi bi-file-earmark-text me-1"></i> Generar Reporte
             </button>
+<<<<<<< HEAD
             @if(auth()->id() === $project->user_id)
                 <a href="{{ route('proyectos.edit', $project->id) }}" class="btn btn-primary">
                     <i class="bi bi-pencil-square me-1"></i> Editar Proyecto
@@ -35,6 +36,22 @@
                     </button>
                 </form>
             @endif
+=======
+            <a href="{{ url('/proyectos/1/editar') }}" class="btn btn-primary">
+                <i class="bi bi-pencil-square me-1"></i> Editar Proyecto
+            </a>
+            <div class="dropdown ms-2">
+                <button class="btn btn-light" type="button" id="projectActions" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="projectActions">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-archive me-2"></i>Archivar</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-repeat me-2"></i>Duplicar</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
+                </ul>
+            </div>
+>>>>>>> origin/Integracion_ia_eduardo
         </div>
     </div>
 

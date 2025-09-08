@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Justificación de Identidad Visual - Nexus Compendium
 
 ## Contexto Empresarial
@@ -118,6 +119,8 @@ La marca **Nexus Compendium** con esta identidad visual busca:
 
 La marca Nexus Compendium refleja fielmente los objetivos del Instituto Profesional San Sebastián en su misión de vinculación con el medio, combinando elementos visuales que comunican tanto la seriedad académica como el dinamismo necesario para generar impacto positivo en la comunidad.
 =======
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 # Justificación de Identidad Visual - Nexus Compendium
 
 ## Contexto Empresarial
@@ -236,4 +239,7 @@ La marca **Nexus Compendium** con esta identidad visual busca:
 ## Conclusión
 
 La marca Nexus Compendium refleja fielmente los objetivos del Instituto Profesional San Sebastián en su misión de vinculación con el medio, combinando elementos visuales que comunican tanto la seriedad académica como el dinamismo necesario para generar impacto positivo en la comunidad.
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Integracion_ia_eduardo

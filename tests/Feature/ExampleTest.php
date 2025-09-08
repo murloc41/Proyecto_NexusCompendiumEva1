@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 namespace Tests\Feature;
 
 // use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -18,6 +21,7 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 }
+<<<<<<< HEAD
 =======
 it('returns a successful response', function () {
     $response = $this->get('/');
@@ -25,3 +29,5 @@ it('returns a successful response', function () {
     $response->assertStatus(200);
 });
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

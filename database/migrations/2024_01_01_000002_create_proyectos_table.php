@@ -26,9 +26,14 @@ return new class extends Migration
 
         Schema::create('proyectos', function (Blueprint $table) {
             $table->id();
+<<<<<<< HEAD
             $table->foreignId('user_id')->constrained('users');
             $table->string('nombre', 200);
             $table->foreignId('institute_id')->constrained('institutes');
+=======
+            $table->string('nombre', 200);
+             $table->foreignId('institute_id')->constrained('institutes');
+>>>>>>> origin/Integracion_ia_eduardo
             $table->foreignId('area_academica_id')->constrained('areas_academicas');
             $table->foreignId('estado_id')->constrained('estados_proyecto');
             $table->date('fecha_inicio');
@@ -40,6 +45,10 @@ return new class extends Migration
             $table->text('funcionalidades_principales');
             $table->text('restricciones')->nullable();
             $table->timestamps();
+<<<<<<< HEAD
+=======
+              $table->foreignId('institute_id')->constrained('institutes');
+>>>>>>> origin/Integracion_ia_eduardo
             $table->index('nombre');
             $table->index(['area_academica_id', 'estado_id']);
             $table->index('fecha_inicio');

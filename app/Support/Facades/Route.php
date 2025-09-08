@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace Illuminate\Support\Facades;
@@ -54,6 +55,8 @@ class Route
     }
 }
 =======
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 namespace Illuminate\Support\Facades;
@@ -108,4 +111,7 @@ class Route
         return null;
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Integracion_ia_eduardo

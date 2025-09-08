@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 @extends('layouts.app')
 
 @section('title', 'Login - Nexus Compendium')
@@ -261,6 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 @endsection
+<<<<<<< HEAD
 =======
 <x-guest-layout>
     <x-auth-card>
@@ -330,3 +334,5 @@ document.addEventListener('DOMContentLoaded', function() {
     </x-auth-card>
 </x-guest-layout>
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

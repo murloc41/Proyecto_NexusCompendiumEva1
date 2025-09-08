@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace App\Models;
@@ -72,6 +73,8 @@ class Project
 =======
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 namespace App\Models;
@@ -83,7 +86,10 @@ class Project extends Model
     protected $table = 'proyectos';
 
     protected $fillable = [
+<<<<<<< HEAD
         'user_id',
+=======
+>>>>>>> origin/Integracion_ia_eduardo
         'nombre',
         'institute_id',
         'area_academica_id',
@@ -103,7 +109,15 @@ class Project extends Model
      */
     public function user()
     {
+<<<<<<< HEAD
         return $this->belongsTo(\App\Models\User::class, 'user_id');
+=======
+        // Relación con modelo User
+        return (object)[
+            'id' => $this->user_id,
+            'name' => 'Usuario del Proyecto'
+        ];
+>>>>>>> origin/Integracion_ia_eduardo
     }
 
     /**
@@ -136,6 +150,9 @@ class Project extends Model
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo

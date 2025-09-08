@@ -18,10 +18,14 @@
 
     <!-- Custom Styles -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=<?php echo time(); ?>">
 =======
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 >>>>>>> origin/Cambios__Sofia
+=======
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=<?php echo time(); ?>">
+>>>>>>> origin/Integracion_ia_eduardo
    
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
     
@@ -30,6 +34,9 @@
 <body>
     <header>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/Integracion_ia_eduardo
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -60,6 +67,7 @@
                          <li class="nav-item">
                             <a class="nav-link" href="{{ url('/login') }}">Login</a>
                         </li>
+<<<<<<< HEAD
 =======
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
@@ -96,6 +104,8 @@
 </li>
                         @endauth
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
                     </ul>
                 </div>
             </div>

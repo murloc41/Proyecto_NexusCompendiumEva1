@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "name": "laravel/laravel",
     "type": "project",
@@ -68,6 +69,8 @@
 =======
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
 {
     "$schema": "https://getcomposer.org/schema.json",
     "name": "laravel/laravel",
@@ -78,29 +81,40 @@
     "require": {
         "php": "^8.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "guzzlehttp/guzzle": "^7.9",
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+        "guzzlehttp/guzzle": "^7.9",
+>>>>>>> origin/Integracion_ia_eduardo
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         "laravel/breeze": "^2.3",
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
         "laravel/pail": "^1.2.2",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "phpunit/phpunit": "^11.5.3"
 =======
         "pestphp/pest": "^3.8",
         "pestphp/pest-plugin-laravel": "^3.2"
 >>>>>>> origin/Cambios__Sofia
+=======
+        "phpunit/phpunit": "^11.5.3"
+>>>>>>> origin/Integracion_ia_eduardo
     },
     "autoload": {
         "psr-4": {
@@ -117,11 +131,15 @@
     "scripts": {
         "post-autoload-dump": [
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
 =======
             "@php artisan config:clear",
             "@php artisan clear-compiled",
 >>>>>>> origin/Cambios__Sofia
+=======
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+>>>>>>> origin/Integracion_ia_eduardo
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
@@ -162,6 +180,9 @@
     "prefer-stable": true
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
 =======
 >>>>>>> origin/Cambios__Sofia
+=======
+>>>>>>> origin/Integracion_ia_eduardo
