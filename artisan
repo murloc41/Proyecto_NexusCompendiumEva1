@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env php
 <?php
 
@@ -158,6 +159,8 @@ if (isset($argv[1])) {
     echo "  php artisan serve\n";
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 #!/usr/bin/env php
 <?php
 
@@ -176,4 +179,7 @@ $app = require_once __DIR__.'/bootstrap/app.php';
 $status = $app->handleCommand(new ArgvInput);
 
 exit($status);
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

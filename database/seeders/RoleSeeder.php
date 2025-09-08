@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <?php
 
@@ -51,6 +52,8 @@ class RoleSeeder
     }
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 
 <?php
 
@@ -102,4 +105,7 @@ class RoleSeeder
         echo "🎯 Total de roles creados: " . count($roles) . "\n";
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

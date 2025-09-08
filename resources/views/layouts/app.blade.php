@@ -17,7 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=<?php echo time(); ?>">
+=======
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+>>>>>>> origin/Cambios__Sofia
    
     <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
     
@@ -25,6 +29,7 @@
 </head>
 <body>
     <header>
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -55,6 +60,42 @@
                          <li class="nav-item">
                             <a class="nav-link" href="{{ url('/login') }}">Login</a>
                         </li>
+=======
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">Inicio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                            </li>
+                        @endguest
+
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('usuarios.index') }}">Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('actores.index') }}">Actores de Interés</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('reportes.index') }}">Reportes</a>
+                            </li>
+                            <li class="nav-item">
+    <form method="POST" action="{{ route('logout') }}" class="d-inline">
+        @csrf
+        <button type="submit" class="nav-link btn btn-link p-0" style="color: inherit; text-decoration: none;">Cerrar sesión</button>
+    </form>
+</li>
+                        @endauth
+>>>>>>> origin/Cambios__Sofia
                     </ul>
                 </div>
             </div>

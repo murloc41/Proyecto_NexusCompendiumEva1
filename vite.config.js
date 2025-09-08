@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
+=======
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+>>>>>>> origin/Cambios__Sofia
 
 export default defineConfig({
     plugins: [
@@ -9,6 +14,7 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
+<<<<<<< HEAD
         tailwindcss(),
     ],
 });
@@ -27,3 +33,7 @@ export default defineConfig({
     ],
 });
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+    ],
+});
+>>>>>>> origin/Cambios__Sofia

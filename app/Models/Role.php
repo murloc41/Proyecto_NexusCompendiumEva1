@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace App\Models;
@@ -56,6 +57,8 @@ class Role
     }
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 <?php
 
 namespace App\Models;
@@ -112,4 +115,7 @@ class Role
         ];
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 return [
@@ -50,6 +51,8 @@ return [
     ],
 ];
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 <?php
 
 return [
@@ -176,4 +179,7 @@ return [
     ],
 
 ];
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

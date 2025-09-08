@@ -129,7 +129,11 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
+<<<<<<< HEAD
         Str::snake((string) env('APP_NAME', 'laravel')).'_session'
+=======
+        Str::slug(env('APP_NAME', 'laravel')).'-session'
+>>>>>>> origin/Cambios__Sofia
     ),
 
     /*

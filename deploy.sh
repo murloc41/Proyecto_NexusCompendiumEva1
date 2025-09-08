@@ -44,6 +44,11 @@ echo "Intentando crear la base de datos '${DB_NAME}' (si no existe)..."
 # y que el usuario 'root' de MySQL no tiene contraseña.
 mysql -u root -e "CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
+echo "------------------------------------------------------------------"
+echo "¡La configuración del proyecto ha finalizado!"
+echo "Tu aplicación debería estar disponible en: ${APP_URL}"
+echo "Asegúrate de que Laragon esté en ejecución y haz clic en 'Reload'."
+echo "Para compilar los assets para desarrollo, ejecuta: npm run dev"
 # 6. Ejecutar las migraciones y los seeders de la base de datos
 echo "Ejecutando migraciones y seeders..."
 php artisan migrate --seed
@@ -53,3 +58,8 @@ echo "¡La configuración del proyecto ha finalizado!"
 echo "Tu aplicación debería estar disponible en: ${APP_URL}"
 echo "Asegúrate de que Laragon esté en ejecución y haz clic en 'Reload'."
 echo "Para compilar los assets para desarrollo, ejecuta: npm run dev"
+echo "------------------------------------------------------------------"
+echo "Notas de integración:"
+echo "- El sistema incluye CRUD de proyectos (César) y CRUD de usuarios (Frank)."
+echo "- Ambos CRUD están integrados y protegidos por autenticación."
+echo "- Para pruebas de usuarios y proyectos, revisa los archivos CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK.md y CAMBIOS_CRUD_USUARIOS_FRANK.md."

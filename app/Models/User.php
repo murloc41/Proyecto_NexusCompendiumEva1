@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace App\Models;
@@ -100,6 +101,8 @@ class User
     }
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 <?php
 
 namespace App\Models;
@@ -148,4 +151,7 @@ class User extends Authenticatable
         ];
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

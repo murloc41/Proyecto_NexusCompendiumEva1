@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 
 namespace App\Models;
@@ -69,6 +70,8 @@ class Project
     }
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 <?php
 
 namespace App\Models;
@@ -132,4 +135,7 @@ class Project extends Model
         return $this->belongsTo(\App\Models\EstadoProyecto::class, 'estado_id');
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia

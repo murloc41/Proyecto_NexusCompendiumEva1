@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <?php
 
@@ -77,6 +78,8 @@ class DatabaseSeeder
     }
 }
 =======
+=======
+>>>>>>> origin/Cambios__Sofia
 <?php
 
 namespace Database\Seeders;
@@ -236,4 +239,7 @@ class DatabaseSeeder extends Seeder
         }
     }
 }
+<<<<<<< HEAD
 >>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
+=======
+>>>>>>> origin/Cambios__Sofia
