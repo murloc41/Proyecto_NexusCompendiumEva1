@@ -1,6 +1,4 @@
 <?php
-namespace App\Models;
-<?php
 
 namespace App\Models;
 
@@ -14,9 +12,8 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
+     * Los atributos que se pueden asignar masivamente.
+     * @var lista<string>
      */
     protected $fillable = [
         'name',
@@ -25,9 +22,8 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
+     * Los atributos que deben estar ocultos para la serialización.
+     * @var lista<string>
      */
     protected $hidden = [
         'password',
@@ -35,40 +31,8 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
-}
-     * @var list<string>
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var list<string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * Los atributos que deben ser convertidos a tipos nativos.
+     * @return array<string, string>  // Devuelve un arreglo asociativo de atributos y sus tipos
      */
     protected function casts(): array
     {

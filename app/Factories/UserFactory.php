@@ -131,39 +131,37 @@ class UserFactory
         $this->emailVerified = true;
         return $this;
     }
-}
-=======
-=======
->>>>>>> origin/Integracion_ia_eduardo
-<?php
-
-namespace App\Factories;
 
 use App\Models\User;
 
-/**
- * Fábrica para generar usuarios del Instituto Profesional San Sebastián
- * Genera datos de prueba con correos @ipss.cl
+    /**
+     * Fábrica para generar usuarios del Instituto Profesional San Sebastián
+     * Genera datos de prueba con correos @ipss.cl
+     * Comentarios traducidos al español si existen anotaciones.
  */
 class UserFactory
 {
     /**
      * Modelo asociado a esta fábrica
+     * Comentarios traducidos al español si existen anotaciones.
      */
     protected $model = User::class;
 
     /**
      * ID del rol por defecto (5 = Estudiante)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     protected $roleId = 5;
 
     /**
      * Estado de verificación del email
+     * Comentarios traducidos al español si existen anotaciones.
      */
     protected $emailVerified = true;
 
     /**
      * Datos predeterminados del usuario
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function definition(): array
     {
@@ -182,6 +180,7 @@ class UserFactory
 
     /**
      * Marcar email como no verificado
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function unverified(): static
     {
@@ -191,6 +190,7 @@ class UserFactory
 
     /**
      * Crear un usuario
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function make(): User
     {
@@ -200,6 +200,7 @@ class UserFactory
 
     /**
      * Crear múltiples usuarios
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function count(int $count): array
     {
@@ -212,6 +213,7 @@ class UserFactory
 
     /**
      * Asignar rol específico
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function withRole(int $roleId): static
     {
@@ -221,6 +223,7 @@ class UserFactory
 
     /**
      * Crear estudiante (rol 5)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function student(): static
     {
@@ -229,6 +232,7 @@ class UserFactory
 
     /**
      * Crear docente (rol 3)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function teacher(): static
     {
@@ -237,6 +241,7 @@ class UserFactory
 
     /**
      * Crear administrador (rol 1)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function admin(): static
     {
@@ -245,6 +250,7 @@ class UserFactory
 
     /**
      * Crear coordinador (rol 2)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function coordinator(): static
     {
@@ -253,6 +259,7 @@ class UserFactory
 
     /**
      * Crear tutor (rol 4)
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function tutor(): static
     {
@@ -261,6 +268,7 @@ class UserFactory
 
     /**
      * Marcar email como verificado
+     * Comentarios traducidos al español si existen anotaciones.
      */
     public function verified(): static
     {

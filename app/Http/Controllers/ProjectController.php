@@ -7,17 +7,12 @@ use App\Models\Project;
 
 class ProjectController extends Controller
 {
-<<<<<<< HEAD
     public function __construct()
     {
         $this->middleware('auth');
     }
     /**
-     * Muestra un listado de los recursos.
-=======
-    /**
-     * Display a listing of the resource.
->>>>>>> origin/Integracion_ia_eduardo
+     * Muestra un listado de proyectos con filtros.
      */
     public function index(Request $request)
     {
@@ -28,19 +23,19 @@ class ProjectController extends Controller
             $query->where('nombre', 'like', '%' . $request->q . '%');
         }
 
-        // Filtrar por estado
+        // Filtro por estado
         if ($request->filled('estado')) {
             $query->where('estado_id', $request->estado);
         }
 
-        // Filtrar por área académica
+        // Filtro por área académica
         if ($request->filled('area')) {
             $query->where('area_academica_id', $request->area);
         }
 
-        // Filtrar por periodo (ejemplo: año y mes de inicio)
+        // Filtro por periodo (YYYY-MM)
         if ($request->filled('periodo')) {
-            $periodo = $request->periodo; // formato YYYY-MM
+            $periodo = $request->periodo;
             $query->where('fecha_inicio', 'like', $periodo . '%');
         }
 
@@ -48,37 +43,15 @@ class ProjectController extends Controller
 
         // Estadísticas
         $total = Project::count();
-        $activos = Project::where('estado_id', 1)->count(); // Ajusta el ID según tu base
-        $planificacion = Project::where('estado_id', 3)->count(); // Si tienes estado "Planificación"
-        $completados = Project::where('estado_id', 2)->count(); // Ajusta el ID según tu base
+        $activos = Project::where('estado_id', 1)->count();
+        $planificacion = Project::where('estado_id', 3)->count();
+        $completados = Project::where('estado_id', 2)->count();
 
-        return view('proyectos.index', compact('projects', 'total', 'activos', 'planificacion', 'completados')); // <-- Cambia 'projects.index' por 'proyectos.index'
+        return view('proyectos.index', compact('projects', 'total', 'activos', 'planificacion', 'completados'));
     }
 
     /**
-<<<<<<< HEAD
-     * Muestra el formulario para crear un nuevo recurso.
-=======
-     * Show the form for creating a new resource.
->>>>>>> origin/Integracion_ia_eduardo
-     */
-    public function create()
-    {
-        $institutes = \App\Models\Institute::all();
-        $areas = \App\Models\AreaAcademica::all();
-        $estados = \App\Models\EstadoProyecto::all();
-        return view('proyectos.create', compact('institutes', 'areas', 'estados'));
-    }
-
-    /**
-<<<<<<< HEAD
-     * Almacena un nuevo recurso Proyecto en la base de datos.
-     *
-     * Valida los datos del formulario, asocia el proyecto al usuario autenticado
-     * y redirige con mensaje de éxito.
-=======
-     * Store a newly created resource in storage.
->>>>>>> origin/Integracion_ia_eduardo
+     * Guarda un nuevo proyecto.
      */
     public function store(Request $request)
     {
@@ -96,22 +69,13 @@ class ProjectController extends Controller
             'funcionalidades_principales' => 'required|string',
             'restricciones' => 'nullable|string',
         ]);
-<<<<<<< HEAD
-    $validated['user_id'] = auth()->id();
-    Project::create($validated);
-    return redirect()->route('proyectos.index')->with('success', 'Proyecto creado correctamente.');
-    }
-
-    /**
-     * Muestra el recurso especificado.
-=======
+        $validated['user_id'] = auth()->id();
         Project::create($validated);
         return redirect()->route('proyectos.index')->with('success', 'Proyecto creado correctamente.');
     }
 
     /**
-     * Display the specified resource.
->>>>>>> origin/Integracion_ia_eduardo
+     * Muestra un proyecto específico.
      */
     public function show($id)
     {
@@ -120,11 +84,7 @@ class ProjectController extends Controller
     }
 
     /**
-<<<<<<< HEAD
-     * Muestra el formulario para editar el recurso especificado.
-=======
-     * Show the form for editing the specified resource.
->>>>>>> origin/Integracion_ia_eduardo
+     * Muestra el formulario de edición de un proyecto.
      */
     public function edit($id)
     {
@@ -136,11 +96,7 @@ class ProjectController extends Controller
     }
 
     /**
-<<<<<<< HEAD
-     * Actualiza el recurso especificado en almacenamiento.
-=======
-     * Update the specified resource in storage.
->>>>>>> origin/Integracion_ia_eduardo
+     * Actualiza un proyecto existente.
      */
     public function update(Request $request, $id)
     {
@@ -159,34 +115,16 @@ class ProjectController extends Controller
             'restricciones' => 'nullable|string',
         ]);
         $project = Project::findOrFail($id);
-<<<<<<< HEAD
-        if ($project->user_id !== auth()->id()) {
-            abort(403, 'No autorizado');
-        }
-        $project->update($validated);
-        return redirect()->route('proyectos.show', $project->id)->with('success', 'Proyecto actualizado correctamente.');
-    }
-
-    /**
-     * Elimina el recurso especificado del almacenamiento.
-=======
         $project->update($validated);
         return redirect()->route('proyectos.index')->with('success', 'Proyecto actualizado correctamente.');
     }
 
     /**
-     * Remove the specified resource from storage.
->>>>>>> origin/Integracion_ia_eduardo
+     * Elimina un proyecto.
      */
     public function destroy($id)
     {
         $project = Project::findOrFail($id);
-<<<<<<< HEAD
-        if ($project->user_id !== auth()->id()) {
-            abort(403, 'No autorizado');
-        }
-=======
->>>>>>> origin/Integracion_ia_eduardo
         $project->delete();
         return redirect()->route('proyectos.index')->with('success', 'Proyecto eliminado correctamente.');
     }

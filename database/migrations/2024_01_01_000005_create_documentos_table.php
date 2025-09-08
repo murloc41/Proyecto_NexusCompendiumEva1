@@ -7,11 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-<<<<<<< HEAD
      * Ejecuta las migraciones.
-=======
-     * Run the migrations.
->>>>>>> origin/Integracion_ia_eduardo
      */
     public function up(): void
     {
@@ -24,26 +20,20 @@ return new class extends Migration
 
         Schema::create('documentos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('tipo_id')->constrained('tipo_documento');
+            $table->foreignId('tipo_id')->constrained('tipo_documento')->onDelete('cascade');
             $table->morphs('documentable'); // Polimórfico: puede pertenecer a proyecto, actor, etc.
             $table->string('nombre', 150);
             $table->string('ruta_archivo', 255);
             $table->string('extension', 10)->nullable();
             $table->integer('tamano')->nullable(); // Tamaño en KB
             $table->text('descripcion')->nullable();
-            $table->foreignId('usuario_id')->nullable()->constrained('users');
+            $table->foreignId('usuario_id')->nullable()->constrained('users')->onDelete('set null');
             $table->timestamps();
-            
-           
         });
     }
 
     /**
-<<<<<<< HEAD
      * Revierte las migraciones.
-=======
-     * Reverse the migrations.
->>>>>>> origin/Integracion_ia_eduardo
      */
     public function down(): void
     {

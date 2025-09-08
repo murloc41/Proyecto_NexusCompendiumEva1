@@ -1,6 +1,6 @@
 # Cambios realizados en el CRUD de Proyectos (agosto 2025)
 
-**Autores:** Cesar Rubilar y Frank
+**Autores:** Cesar Rubilar
 
 ## Resumen
 Se realizaron mejoras y correcciones en la lógica y seguridad del CRUD de Proyectos para cumplir con los requisitos del enunciado y las mejores prácticas de Laravel.

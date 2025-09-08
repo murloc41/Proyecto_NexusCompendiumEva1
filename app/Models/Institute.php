@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 <?php
 
 namespace App\Models;
 
+/**
+ * Modelo simple para institutos.
+ */
 class Institute
 {
     protected $fillable = [
@@ -31,7 +31,6 @@ class Institute
                 $this->{$key} = $value;
             }
         }
-        
         if (!isset($this->created_at)) {
             $this->created_at = date('Y-m-d H:i:s');
         }
@@ -41,90 +40,21 @@ class Institute
     }
 
     /**
-     * Obtener usuarios del instituto
+     * Devuelve los usuarios del instituto (simulado).
      */
     public function users()
     {
-        // Relación con modelo Users
+        // Relación simulada con usuarios
         return [];
     }
 
     /**
-     * Obtener proyectos del instituto
+     * Devuelve los proyectos del instituto (simulado).
      */
+
     public function projects()
     {
-        // Relación con modelo Projects
+        // Relación simulada con proyectos
         return [];
     }
 }
-=======
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo
-<?php
-
-namespace App\Models;
-use Illuminate\Database\Eloquent\Model;
-
-class Institute extends Model
-{
-    protected $fillable = [
-        'name',
-        'description',
-        'address',
-        'phone',
-        'email',
-    ];
-
-    public $id;
-    public $name;
-    public $description;
-    public $address;
-    public $phone;
-    public $email;
-    public $created_at;
-    public $updated_at;
-
-    public function __construct($attributes = [])
-    {
-        foreach ($attributes as $key => $value) {
-            if (property_exists($this, $key)) {
-                $this->{$key} = $value;
-            }
-        }
-        
-        if (!isset($this->created_at)) {
-            $this->created_at = date('Y-m-d H:i:s');
-        }
-        if (!isset($this->updated_at)) {
-            $this->updated_at = date('Y-m-d H:i:s');
-        }
-    }
-
-    /**
-     * Obtener usuarios del instituto
-     */
-    public function users()
-    {
-        // Relación con modelo Users
-        return [];
-    }
-
-    /**
-     * Obtener proyectos del instituto
-     */
-    public function projects()
-    {
-        // Relación con modelo Projects
-        return [];
-    }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo

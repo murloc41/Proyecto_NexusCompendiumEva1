@@ -1,95 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php
-
-namespace App\Models;
-
-class Project
-{
-    protected $fillable = [
-        'title',
-        'description',
-        'user_id',
-        'status',
-        'start_date',
-        'end_date',
-    ];
-
-    public $id;
-    public $title;
-    public $description;
-    public $user_id;
-    public $status;
-    public $start_date;
-    public $end_date;
-    public $created_at;
-    public $updated_at;
-
-    public function __construct($attributes = [])
-    {
-        foreach ($attributes as $key => $value) {
-            if (property_exists($this, $key)) {
-                $this->{$key} = $value;
-            }
-        }
-        
-        if (!isset($this->created_at)) {
-            $this->created_at = date('Y-m-d H:i:s');
-        }
-        if (!isset($this->updated_at)) {
-            $this->updated_at = date('Y-m-d H:i:s');
-        }
-        if (!isset($this->status)) {
-            $this->status = 'active';
-        }
-    }
-
-    /**
-     * Obtener usuario propietario del proyecto
-     */
-    public function user()
-    {
-        // Relación con modelo User
-        return (object)[
-            'id' => $this->user_id,
-            'name' => 'Usuario del Proyecto'
-        ];
-    }
-
-    /**
-     * Opciones de estado del proyecto
-     */
-    public static function getStatusOptions()
-    {
-        return [
-            'active' => 'Activo',
-            'completed' => 'Completado',
-            'suspended' => 'Suspendido',
-            'cancelled' => 'Cancelado',
-        ];
-    }
-}
-=======
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo
 <?php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use App\Models\Institute;
+use App\Models\AreaAcademica;
+use App\Models\EstadoProyecto;
 
+/**
+ * Modelo Eloquent para proyectos.
+ */
 class Project extends Model
 {
     protected $table = 'proyectos';
 
     protected $fillable = [
-<<<<<<< HEAD
-        'user_id',
-=======
->>>>>>> origin/Integracion_ia_eduardo
         'nombre',
         'institute_id',
         'area_academica_id',
@@ -109,15 +35,7 @@ class Project extends Model
      */
     public function user()
     {
-<<<<<<< HEAD
-        return $this->belongsTo(\App\Models\User::class, 'user_id');
-=======
-        // Relación con modelo User
-        return (object)[
-            'id' => $this->user_id,
-            'name' => 'Usuario del Proyecto'
-        ];
->>>>>>> origin/Integracion_ia_eduardo
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     /**
@@ -133,26 +51,27 @@ class Project extends Model
         ];
     }
 
-    // Relaciones (opcional, si quieres acceder a los datos relacionados)
+    /**
+     * Relación con instituto
+     */
     public function instituto()
     {
-        return $this->belongsTo(\App\Models\Institute::class, 'institute_id');
+        return $this->belongsTo(Institute::class, 'institute_id');
     }
 
+    /**
+     * Relación con área académica
+     */
     public function areaAcademica()
     {
-        return $this->belongsTo(\App\Models\AreaAcademica::class, 'area_academica_id');
+        return $this->belongsTo(AreaAcademica::class, 'area_academica_id');
     }
 
+    /**
+     * Relación con estado del proyecto
+     */
     public function estado()
     {
-        return $this->belongsTo(\App\Models\EstadoProyecto::class, 'estado_id');
+        return $this->belongsTo(EstadoProyecto::class, 'estado_id');
     }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/CAMBIOS_CRUD_PROYECTOS_CESAR_FRANK
-=======
->>>>>>> origin/Cambios__Sofia
-=======
->>>>>>> origin/Integracion_ia_eduardo
