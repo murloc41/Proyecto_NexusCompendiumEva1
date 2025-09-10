@@ -1,1 +1,1 @@
-web: php artisan config:clear && php artisan cache:clear && vendor/bin/heroku-php-apache2 .
+web: vendor/bin/heroku-php-apache2 public/
